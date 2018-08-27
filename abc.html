@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"da2cffb1a1","applicationID":"95011771","transactionName":"dw1aEUoNWggHQx5GQEdNRw1XFQ==","queueTime":0,"applicationTime":214,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<script type="text/javascript">var _rollbarConfig = {"accessToken":"e5a8e0f609e84611918e6d29563a3b5e","captureUncaught":true,"captureUnhandledRejections":true,"payload":{"environment":"production"}};</script>
+<script type="text/javascript">!function(r){function e(n){if(o[n])return o[n].exports;var t=o[n]={exports:{},id:n,loaded:!1};return r[n].call(t.exports,t,t.exports,e),t.loaded=!0,t.exports}var o={};return e.m=r,e.c=o,e.p="",e(0)}([function(r,e,o){"use strict";var n=o(1),t=o(4);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/2.3.8/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,e,o){"use strict";function n(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}function t(r,e){this.options=r,this._rollbarOldOnError=null;var o=s++;this.shimId=function(){return o},"undefined"!=typeof window&&window._rollbarShims&&(window._rollbarShims[o]={handler:e,messages:[]})}function a(r,e){if(r){var o=e.globalAlias||"Rollbar";if("object"==typeof r[o])return r[o];r._rollbarShims={},r._rollbarWrappedError=null;var t=new p(e);return n(function(){e.captureUncaught&&(t._rollbarOldOnError=r.onerror,i.captureUncaughtExceptions(r,t,!0),i.wrapGlobals(r,t,!0)),e.captureUnhandledRejections&&i.captureUnhandledRejections(r,t,!0);var n=e.autoInstrument;return e.enabled!==!1&&(void 0===n||n===!0||"object"==typeof n&&n.network)&&r.addEventListener&&(r.addEventListener("load",t.captureLoad.bind(t)),r.addEventListener("DOMContentLoaded",t.captureDomContentLoaded.bind(t))),r[o]=t,t})()}}function l(r){return n(function(){var e=this,o=Array.prototype.slice.call(arguments,0),n={shim:e,method:r,args:o,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)})}var i=o(2),s=0,d=o(3),c=function(r,e){return new t(r,e)},p=d.bind(null,c);t.prototype.loadFull=function(r,e,o,t,a){var l=function(){var e;if(void 0===r._rollbarDidLoad){e=new Error("rollbar.js did not load");for(var o,n,t,l,i=0;o=r._rollbarShims[i++];)for(o=o.messages||[];n=o.shift();)for(t=n.args||[],i=0;i<t.length;++i)if(l=t[i],"function"==typeof l){l(e);break}}"function"==typeof a&&a(e)},i=!1,s=e.createElement("script"),d=e.getElementsByTagName("script")[0],c=d.parentNode;s.crossOrigin="",s.src=t.rollbarJsUrl,o||(s.async=!0),s.onload=s.onreadystatechange=n(function(){if(!(i||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){s.onload=s.onreadystatechange=null;try{c.removeChild(s)}catch(r){}i=!0,l()}}),c.insertBefore(s,d)},t.prototype.wrap=function(r,e,o){try{var n;if(n="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){o&&"function"==typeof o&&o.apply(this,arguments);try{return r.apply(this,arguments)}catch(o){var e=o;throw"string"==typeof e&&(e=new String(e)),e._rollbarContext=n()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e,e}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(e){return r}};for(var u="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","),f=0;f<u.length;++f)t.prototype[u[f]]=l(u[f]);r.exports={setupShim:a,Rollbar:p}},function(r,e){"use strict";function o(r,e,o){if(r){var t;"function"==typeof e._rollbarOldOnError?t=e._rollbarOldOnError:r.onerror&&!r.onerror.belongsToShim&&(t=r.onerror,e._rollbarOldOnError=t);var a=function(){var o=Array.prototype.slice.call(arguments,0);n(r,e,t,o)};a.belongsToShim=o,r.onerror=a}}function n(r,e,o,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null),e.handleUncaughtException.apply(e,n),o&&o.apply(r,n)}function t(r,e,o){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var o,n,t;try{o=r.reason}catch(r){o=void 0}try{n=r.promise}catch(r){n="[unhandledrejection] error getting `promise` from event"}try{t=r.detail,!o&&t&&(o=t.reason,n=t.promise)}catch(r){t="[unhandledrejection] error getting `detail` from event"}o||(o="[unhandledrejection] error getting `reason` from event"),e&&e.handleUnhandledRejection&&e.handleUnhandledRejection(o,n)};n.belongsToShim=o,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}}function a(r,e,o){if(r){var n,t,a="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(n=0;n<a.length;++n)t=a[n],r[t]&&r[t].prototype&&l(e,r[t].prototype,o)}}function l(r,e,o){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){for(var n=e.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(e,o,t){n.call(this,e,r.wrap(o),t)};t._rollbarOldAdd=n,t.belongsToShim=o,e.addEventListener=t;for(var a=e.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,e,o){a.call(this,r,e&&e._rollbar_wrapped||e,o)};l._rollbarOldRemove=a,l.belongsToShim=o,e.removeEventListener=l}}r.exports={captureUncaughtExceptions:o,captureUnhandledRejections:t,wrapGlobals:a}},function(r,e){"use strict";function o(r,e){this.impl=r(e,this),this.options=e,n(o.prototype)}function n(r){for(var e=function(r){return function(){var e=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,e)}},o="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","),n=0;n<o.length;n++)r[o[n]]=e(o[n])}o.prototype._swapAndProcessMessages=function(r,e){this.impl=r(this.options);for(var o,n,t;o=e.shift();)n=o.method,t=o.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],o.ts]):this[n].apply(this,t));return this},r.exports=o},function(r,e){"use strict";r.exports=function(r){return function(e){if(!e&&!window._rollbarInitialized){r=r||{};for(var o,n,t=r.globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;o=window._rollbarShims[i++];)n||(n=o.handler),o.handler._swapAndProcessMessages(l,o.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);</script>
+<title>2016 Coachmen Leprechaun, RV Rental in Glendale, CA | RVshare.com</title>
+<meta name="description" content="Top Rated Class C Motor Home Rental Starting at $129/night in Glendale, CA. Sleeps 6 People, View 19 pictures. Best Price Guarantee! Check Availability Now.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://rvshare.com/rvs/details/1128643">
+<link rel="image_src" href="https://d3adfz34ynqwkr.cloudfront.net/image/upload/w_970,h_700,c_pad,b_rgb:efefef,g_center,f_jpg,q_70/rvs-images/78b1d0df9337c5545225ed7c85d5d0cd.jpeg">
+<meta name="twitter:site" content="@rvshare">
+<meta name="twitter:title" content="Class C Motor Home Rental in Glendale, CA">
+<meta name="twitter:description" content="Rentals Starting at $129/night">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:src" content="https://d3adfz34ynqwkr.cloudfront.net/image/upload/w_970,h_700,c_pad,b_rgb:efefef,g_center,f_jpg,q_70/rvs-images/78b1d0df9337c5545225ed7c85d5d0cd.jpeg">
+<meta property="og:title" content="2016 Coachmen Leprechaun, RV Rental in Glendale, CA | RVshare.com">
+<meta property="og:site_name" content="RVshare">
+<meta property="og:url" content="https://rvshare.com/rvs/details/1128643">
+<meta property="og:description" content="Top Rated Class C Motor Home Rental Starting at $129/night in Glendale, CA. Sleeps 6 People, View 19 pictures. Best Price Guarantee! Check Availability Now.">
+<meta property="og:app_id" content="442236449257760">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://d3adfz34ynqwkr.cloudfront.net/image/upload/w_970,h_700,c_pad,b_rgb:efefef,g_center,f_jpg,q_70/rvs-images/78b1d0df9337c5545225ed7c85d5d0cd.jpeg">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#49639f">
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="11eqNJBs4tCjjq4g2eyv6jaQ4H6Bq5dQN8JKhmtetQc/h56ejvk0P95vBlUY7uRtsgu4T0QesrgrKh0k3DZWQg==" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://d2np1fv8ntlij5.cloudfront.net/assets/images/favicon-e7733a8d9491e32dc225f2642f3893d3.ico" />
+  <link rel="shortcut icon" type="image/png" href="https://d2np1fv8ntlij5.cloudfront.net/assets/images/favicon-eb238e45575143da09633860e5458378.png" />
+  <link rel="apple-touch-icon" type="image/png" href="https://d2np1fv8ntlij5.cloudfront.net/assets/images/favicon-eb238e45575143da09633860e5458378.png" />
+
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//maps.googleapis.com">
+  <link rel="dns-preconnect" href="//fonts.googleapis.com">
+  <link rel="dns-preconnect" href="//fonts.gstatic.com">
+  <link rel="dns-preconnect" href="//maps.googleapis.com">
+
+  <link rel="stylesheet" media="screen" href="https://use.fontawesome.com/releases/v5.2.0/css/svg-with-js.css" />
+  <link rel="stylesheet" media="all" href="https://d2np1fv8ntlij5.cloudfront.net/assets/application-3bf07199.chunk.css" />
+  <link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600" />
+    <link rel="prefetch" media="screen" href="https://d2np1fv8ntlij5.cloudfront.net/assets/FreeReportForm-6d0ae8ad.chunk.css" as="style" />
+  <link rel="stylesheet" media="all" href="https://d2np1fv8ntlij5.cloudfront.net/assets/details-d05cfd3b.chunk.css" />
+
+
+  <script>
+//<![CDATA[
+
+    window.dataLayer = window.dataLayer || [];
+      dataLayer.push(  {
+  "p": {
+    "rv": {
+      "id": "1128643",
+      "make": "Coachmen",
+      "model": "Leprechaun",
+      "type": "Class C Motor Home",
+      "city": "Glendale",
+      "state": "CA",
+      "reviews": null,
+      "nr_reviews": 0,
+      "per_night": "$129",
+      "nr_pictures": 19,
+      "description_length": 468,
+      "owner_id": 683060,
+      "related_rentals": true,
+      "instant_book": true
+    }
+  }
+}
+);
+
+//]]>
+</script>  <script>
+//<![CDATA[
+
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5JLP6WZ');
+
+//]]>
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@id": "#Organization",
+  "@type": "Organization",
+  "name": "RVshare",
+  "legalName": "RVshare LLC",
+  "numberOfEmployees": "60",
+  "url": "https://rvshare.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://rvshare.com/assets/images/logo-5f237c13bc79d32e4f5dca76e6eecb86.png",
+    "width": "200",
+    "height": "34"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Akron, OH",
+    "postalCode": "44321",
+    "streetAddress": "155 Montrose W Ave"
+  },
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+1-888-482-0234",
+    "contactType": "Customer Support: RV Owners"
+  }],
+  "sameAs": [
+    "https://www.facebook.com/rvshare",
+    "https://twitter.com/RVshare",
+    "https://plus.google.com/+Rvshareonline",
+    "https://www.instagram.com/rvshare/",
+    "https://www.youtube.com/rvshare",
+    "https://www.pinterest.com/rvshare/",
+    "https://www.linkedin.com/company/rvshare/"
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@id": "https://rvshare.com",
+  "@type": "WebPage",
+  "name": "2016 Coachmen Leprechaun, RV Rental in Glendale, CA | RVshare.com",
+  "dateModified": "",
+  "isPartOf": {
+    "@id":"https://rvshare.com#WebSite"
+  }
+}
+</script>
+    <script type="application/ld+json">
+{
+ "@context": "http://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement":
+ [
+  {
+    "@type": "ListItem",
+    "position": 1,
+    "item":
+    {
+      "@id": "https://rvshare.com",
+      "name": "Home"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 2,
+    "item":
+    {
+      "@id": "https://rvshare.com/rv-rental",
+      "name": "United States"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 3,
+    "item":
+    {
+      "@id": "https://rvshare.com/rv-rental/california",
+      "name": "California"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 4,
+    "item":
+    {
+      "@id": "https://rvshare.com/rv-rental/glendale/ca",
+      "name": "Glendale"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 5,
+    "item":
+    {
+      "name": "2016 Coachmen Leprechaun"
+    }
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "additionalType": "http://www.productontology.org/id/Recreational_vehicle",
+  "name": "2016 Coachmen Leprechaun, RV Rental in Glendale, CA | RVshare.com",
+  "image": "https://d3adfz34ynqwkr.cloudfront.net/image/upload/w_970,h_700,c_pad,b_rgb:efefef,g_center,f_jpg,q_70/rvs-images/78b1d0df9337c5545225ed7c85d5d0cd.jpeg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Accommodation",
+  "additionalType": "http://www.productontology.org/id/Recreational_vehicle",
+  "name": "2016 Coachmen Leprechaun, RV Rental in Glendale, CA | RVshare.com",
+  "image": "https://d3adfz34ynqwkr.cloudfront.net/image/upload/w_970,h_700,c_pad,b_rgb:efefef,g_center,f_jpg,q_70/rvs-images/78b1d0df9337c5545225ed7c85d5d0cd.jpeg",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "34.15212299999999",
+    "longitude": "-118.247893"
+  }
+}
+</script>
+
+
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JLP6WZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div data-hypernova-key="PageHeader" data-hypernova-id="bbbea5f6-6629-4b14-b5e8-bcd50acee135"><header id="site-header" class="bg-white border-bottom box-shadow" data-reactroot=""><div class="navbar navbar-light navbar-expand-md"><div class="container"><a class="navbar-brand order-md-0" id="logo" href="/" title="RVshare Home Page" data-track="click" data-action="Logo"><img alt="RVshare.com" src="https://d2np1fv8ntlij5.cloudfront.net/assets/images/logo-5f237c13bc79d32e4f5dca76e6eecb86.png" srcSet="https://d2np1fv8ntlij5.cloudfront.net/assets/images/logo@2x-fb67b4fc6c94f1b088537db539842e90.png 2x" width="200" height="34"/></a><button class="navbar-toggler collapsed border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><svg aria-hidden="true" data-prefix="far" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14 fa-lg " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></button><div class="collapse navbar-collapse order-md-2" id="navbarSupportedContent"><ul class="navbar-nav ml-auto text-right"><li class="nav-item d-sm-none"><a class="nav-link" href="/list-your-rv">List Your RV</a></li><li class="nav-item"><a id="registration-modal-trigger" href="#" class="nav-link">Sign Up</a></li><li class="nav-item"><a id="login-modal-trigger" href="#" class="nav-link">Log in</a></li><li class="nav-item"><a class="nav-link" href="https://help.rvshare.com/" target="_blank" rel="noopener noreferrer">Help</a></li><li class="nav-item d-none d-sm-flex"><a class="btn btn-outline-rvshare" href="/list-your-rv">List Your RV</a></li></ul></div></div></div></header></div>
+<script type="application/json" data-hypernova-key="PageHeader" data-hypernova-id="bbbea5f6-6629-4b14-b5e8-bcd50acee135"><!--{"isLoggedIn":false,"currentUser":null}--></script>
+
+  
+
+
+
+
+
+
+
+<!-- details -->
+
+
+<main id="main" class="container details">
+  <div class="">
+    <div class="row">
+      <div class="col-md-12 col-lg-8 d-none d-sm-block">
+        <nav aria-label="breadcrumb">
+  <ol class="breadcrumb p-0 m-0 bg-white">
+    <li class="bordered-breadcrumb-item mr-2">
+      <a id="back-to-results" href="/rv-rental" class="border rounded p-1">
+        &laquo; Back to Search Results
+      </a>
+    </li>
+    <li class="breadcrumb-item">
+      <a href="/">
+        <span>RV Rentals</span>
+      </a>
+    </li>
+    <li class="breadcrumb-item">
+      <a href="/rv-rental">
+        <span>United States</span>
+      </a>
+    </li>
+      <!-- This conditional is here for inconsistencies in region data and can be removed -->
+      <li class="breadcrumb-item">
+        <a href="/rv-rental/california">
+          <span>California</span>
+        </a>
+      </li>
+      <!-- This conditional is here for inconsistencies in region data and can be removed -->
+      <li class="breadcrumb-item">
+        <a href="/rv-rental/glendale/ca">
+          <span>Glendale</span>
+        </a>
+      </li>
+    <li class="breadcrumb-item active" aria-current="page">
+      <span>
+        <span title="2016 Coachmen Leprechaun">
+          2016 Coachmen Leprechaun
+        </span>
+      </span>
+    </li>
+  </ol>
+</nav>
+
+        <h1 class="d-none d-sm-block my-2">
+          2016 Coachmen Leprechaun
+        </h1>
+      </div>
+      <div class="col-md-12 col-lg-4">
+                <div data-hypernova-key="InstantBookBanner" data-hypernova-id="de5c270b-4156-4751-89c4-46335475b162"></div>
+      <script type="application/json" data-hypernova-key="InstantBookBanner" data-hypernova-id="de5c270b-4156-4751-89c4-46335475b162"><!--{"canInstantBook":true}--></script>
+
+      </div>
+    </div>
+  </div>
+  <div class="row mt-lg-2">
+    <div class="col-md-12 col-lg-8">
+      <div class="gallery mb-2 mb-md-0">
+        <!-- links-list -->
+        <div class="links-list d-none d-sm-block">
+          <nav class="nav nav-pills nav-justified">
+            <a class="nav-item nav-link" href="#overview">Overview</a>
+            <a class="nav-item nav-link" href="#rates">Rates</a>
+            <a class="nav-item nav-link" href="#availability">Availability</a>
+            <a class="nav-item nav-link" href="#map">Map</a>
+          </nav>
+        </div>
+        <!-- /links-list -->
+        <div id="image-carousel">
+                <div data-hypernova-key="ImageCarousel" data-hypernova-id="5cbd41cc-c785-4337-9e7c-96e35ac3e876"></div>
+      <script type="application/json" data-hypernova-key="ImageCarousel" data-hypernova-id="5cbd41cc-c785-4337-9e7c-96e35ac3e876"><!--{"items":[{"name":"78b1d0df9337c5545225ed7c85d5d0cd.jpeg"},{"name":"2507c787c0f3089ecd413ce3b9a5ac7c.jpeg"},{"name":"49460810ab929dd76c3285b04858880c.jpeg"},{"name":"69cd3597615f38b6106aa368ba3c234a.jpeg"},{"name":"cd6ce34904f9837f5ecccfb4c3652b0f.jpeg"},{"name":"2c2d53afaecf6ab03a4d40a432eac414.jpeg"},{"name":"eac87857af33c48375ce98e2cd20b45d.jpeg"},{"name":"6cb06985373c5c37655377915a636131.jpeg"},{"name":"35be91fafca213aec6bf793d2e021f1d.jpeg"},{"name":"952025fca0d4148818f5bacbf587f405.jpeg"},{"name":"c66154fc0dc8383420c0d50206c394fb.jpeg"},{"name":"d75a08d9379722cc105f0ff610d2f970.jpeg"},{"name":"d52de126473b656c74a0db68ba334332.jpeg"},{"name":"3c185fc9de249b6c8aa9bd21acc63ae9.jpeg"},{"name":"b3447a40c4169f710170468f4b5550bf.jpeg"},{"name":"f2fc8f9355ae0375514d1d8e95d5c77e.jpeg"},{"name":"8d978f2c6b1fdb8b5f95f931cfaf99fa.jpeg"},{"name":"d4c0b628516e635d58f301ba62a79f17.jpeg"},{"name":"49917cc07c5626707239a8a43e961fd9.jpeg"}],"headline":"2016 Coachmen Leprechaun"}--></script>
+
+        </div>
+        <h2 class="d-sm-none h5 p-2 mt-2 mt-sm-0 mb-0">
+          2016 Coachmen Leprechaun
+        </h2>
+      </div>
+    </div>
+    <div class="col-md-12 col-lg-4">
+      <div class="mb-3 mt-sm-3 mt-lg-0">
+              <div data-hypernova-key="QuoteBuilder" data-hypernova-id="8b2db408-1e67-42ed-b115-911b1c519db0"></div>
+      <script type="application/json" data-hypernova-key="QuoteBuilder" data-hypernova-id="8b2db408-1e67-42ed-b115-911b1c519db0"><!--{"canInstantBook":true,"hasNightlyRate":true,"nightlyRate":129.0}--></script>
+
+      </div>
+      <div class="mb-3 px-3 px-sm-0">
+              <div data-hypernova-key="FavoritesToggle" data-hypernova-id="b80418a7-04d2-4227-b5d3-9244a7211c44"></div>
+      <script type="application/json" data-hypernova-key="FavoritesToggle" data-hypernova-id="b80418a7-04d2-4227-b5d3-9244a7211c44"><!--{"favorited":false,"rvId":"1128643"}--></script>
+
+      </div>
+            <div data-hypernova-key="ShareMenu" data-hypernova-id="94829b0e-a916-493b-9714-d0c526456131"></div>
+      <script type="application/json" data-hypernova-key="ShareMenu" data-hypernova-id="94829b0e-a916-493b-9714-d0c526456131"><!--{"url":"https://rvshare.com/rvs/details/1128643","featuredImage":"https://d3adfz34ynqwkr.cloudfront.net/image/upload/w_970,h_700,c_pad,b_rgb:efefef,g_center,f_jpg,q_70/rvs-images/78b1d0df9337c5545225ed7c85d5d0cd.jpeg","description":"Class C Motor Home Rental in Glendale, CA - Rentals Starting at $129/night"}--></script>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 col-lg-8">
+      <div class="list-group list-group-flush details-list-group">
+  <div class="list-group-item px-3 px-sm-0">
+    <div class="row">
+      <div class="col-lg-3 mb-2 mb-sm-0">
+        <strong>Details</strong>
+      </div>
+      <div id="details-col" class="col-lg-9">
+        <ul class="listing-details-list list-unstyled mb-0">
+          <li>2016 Coachmen Leprechaun</li>
+          <li>Class C Motor Home</li>
+          <li>Sleeps 6</li>
+          <li>Length 23 ft.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="accordion" class="accordion details-accordion">
+  <!-- overview -->
+  <div class="card">
+    <div class="card-header p-2" id="overview-heading">
+      <button class="btn btn-link btn-block text-left py-0 px-2 text-dark font-weight-bold" type="button" data-toggle="collapse" data-target="#overview-panel" aria-expanded="true" aria-controls="overview-panel">
+        Overview
+        <div class="float-right">
+          <i class="fas fa-angle-down"></i>
+          <i class="fas fa-angle-up d-none"></i>
+        </div>
+      </button>
+    </div>
+    <div id="overview-panel" class="details-panel collapse" aria-labelledby="overview-heading" data-parent="#accordion">
+      <div class="card-body">
+        <div id="overview">
+  <div class="my-4">
+    <strong>Description</strong>
+    <div class="mt-3">
+      <p>Beautiful 2016 Coachmen Leprechaun ready for your getaway. Sleeps up to 6 people. Fully stocked kitchen/cookware/dishes and linens/blankets for bed. This RV is fully equipped with a refrigerator, gas stove &amp; oven, and microwave. The on-board generator can run the air-conditioning unit without the need for city power hook-up. Fully automatic awning gives you shade under the sun. Deliveries and pickups can be arranged for an extra fee. Contact me with any questions.</p>
+    </div>
+  </div>
+  <div class="list-group list-group-flush details-list-group">
+    <div class="list-group-item">
+      <div class="row">
+        <div class="col-lg-3">
+          <strong>Suitability</strong>
+        </div>
+        <div id="suitability-col" class="col-lg-9">
+          <ul class="list-unstyled list-columns-sm-2 mb-0">
+              <li>Minimum Age: 25</li>
+            <li>Pet Friendly: Yes</li>
+            <li>Wheelchair Accessible: No</li>
+            <li>Smoking Allowed: No</li>
+          </ul>
+          <ul class="list-unstyled mb-0">
+            <li>Pick Up Anytime After:  4:00 PM</li>
+            <li>Drop Off By: 10:00 AM</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="list-group-item">
+      <div class="row">
+        <div class="col-lg-3">
+          <strong>Automotive Features</strong>
+        </div>
+        <div id="automotive-features-col" class="col-lg-9">
+          <ul class="list-unstyled mb-0">
+              <li>Transmission: Automatic</li>
+              <li>Cruise Control: Yes</li>
+              <li>Power Steering: Yes</li>
+              <li>Engine: Ford F350</li>
+              <li>Fresh Water Tank: Yes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="list-group-item border-top">
+      <div class="row">
+        <div class="col-lg-3">
+          <strong>Amenities</strong>
+        </div>
+        <div id="amenities-col" class="col-lg-9">
+          <table class="amenities-table">
+            <tbody>
+              <tr>
+                <td class="pr-3">
+                  <span>In Dash Air Conditioning</span>
+                </td>
+                <td class="pl-3">
+                  <span>Roof Air Conditioning</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="pr-3">
+                  <span>Refrigerator</span>
+                </td>
+                <td class="pl-3">
+                  <span>Kitchen Sink</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="pr-3">
+                  <span>Microwave</span>
+                </td>
+                <td class="pl-3">
+                  <span>Range (Stove)</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="pr-3">
+                  <span>Shower</span>
+                </td>
+                <td class="pl-3">
+                  <span>Hot &amp; Cold Water Supply</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="pr-3">
+                  <span>Toilet</span>
+                </td>
+                <td class="pl-3">
+                  <span>Bathroom Sink</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="pr-3">
+                  <span>TV</span>
+                </td>
+                <td class="pl-3">
+                  <span>DVD Player</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="pr-3">
+                  <span>AM/FM Radio</span>
+                </td>
+                <td class="pl-3">
+                  <span>CD Player</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="pr-3">
+                  <span>iPod Docking Station</span>
+                </td>
+                <td class="pl-3">
+                  <span>Rear Vision Camera</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="pr-3">
+                  <span>Seat Belts</span>
+                </td>
+                <td class="pl-3">
+                  <span>Electric Generator</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="pr-3">
+                  <span>Fire Extinguisher</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+  <!-- /overview -->
+  <!-- rates -->
+  <div class="card">
+    <div class="card-header p-2" id="rates-heading">
+      <button class="btn btn-link btn-block text-left py-0 px-2 text-dark font-weight-bold" type="button" data-toggle="collapse" data-target="#rates-panel" aria-expanded="true" aria-controls="rates-panel">
+        Rates
+        <div class="float-right">
+          <i class="fas fa-angle-down"></i>
+          <i class="fas fa-angle-up d-none"></i>
+        </div>
+      </button>
+    </div>
+    <div id="rates-panel" class="details-panel collapse" aria-labelledby="rates-heading" data-parent="#accordion">
+      <div class="card-body">
+        <div id="rates" class="list-group list-group-flush details-list-group">
+  <div class="list-group-item border-top">
+    <div class="row">
+  <div class="col-md-3">
+    <strong>
+      Base Rate
+    </strong>
+  </div>
+  <div class="col-md-9" data-rate="Base Rate">
+    <ul class="list-unstyled mb-0">
+      <li>
+        <strong>$129.00</strong>
+        <span> / nightly</span>
+      </li>
+      <li>
+        <strong>$800.00</strong>
+        <span> / weekly</span>
+      </li>
+      <li>
+        <strong>$3,000.00</strong>
+        <span> / monthly</span>
+      </li>
+      <li>
+        <span>Minimum Nights: </span>
+        <strong>2</strong>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  </div>
+  <div class="list-group-item">
+    <div class="row">
+  <div class="col-md-3">
+    <strong>
+      Burning man
+    </strong>
+  </div>
+  <div class="col-md-9" data-rate="Burning man">
+    <ul class="list-unstyled mb-0">
+      <li>
+        <strong>
+          Aug 24, 2018
+          <span> - </span>
+          Sep  4, 2018</strong>
+      </li>
+      <li>
+        <strong>$399.00</strong>
+        <span> / nightly</span>
+      </li>
+      <li>
+        <span>Minimum Nights: </span>
+        <strong>7</strong>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  </div>
+  <div class="list-group-item">
+    <div class="row align-items-center">
+      <div class="col col-auto">
+        <span>Don’t see rates for your trip?</span>
+      </div>
+      <div class="col">
+              <div data-hypernova-key="RequestQuoteButton" data-hypernova-id="5cac5dca-39fb-40ac-8758-507ea1f03bcc"></div>
+      <script type="application/json" data-hypernova-key="RequestQuoteButton" data-hypernova-id="5cac5dca-39fb-40ac-8758-507ea1f03bcc"><!--{"canInstantBook":true,"btnProps":{"color":"rvshare-yellow"}}--></script>
+
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="row">
+      <div class="col-lg-3">
+        <strong>Rental Fees</strong>
+      </div>
+      <div id="required-fees-col" class="col-lg-9">
+        <ul class="list-unstyled mb-0">
+          <li>
+            <span>Tax: </span>
+            8.25%
+          </li>
+          <li>
+            <span>Refundable damage deposit: </span>
+            $500.00
+          </li>
+          <li>
+            <span>Excess mileage: </span>
+            $0.35/mile
+          </li>
+          <li>
+            <span>Excess generator usage: </span>
+            $3.00/hour
+          </li>
+          <li>
+            <span>Cleaning fee: </span>
+            $120.00
+          </li>
+          <li>
+            <span>Insurance: </span>
+            $24.95/day
+            <small>(sales tax not included)</small>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="row">
+      <div class="col-lg-3">
+        <strong>Optional Fees</strong>
+      </div>
+      <div id="optional-fees-col" class="col-lg-9">
+        <ul class="list-unstyled mb-0">
+        <li>
+          <span>Sewer tank dump fee (only if you don’t empty): </span>
+          $75.00
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="row">
+      <div class="col-lg-3">
+        <strong>Mileage and Generator</strong>
+      </div>
+      <div id="mileage-generator-col" class="col-lg-9">
+        <ul class="list-unstyled mb-0">
+          <li>
+            100 miles per night included with rental
+          </li>
+          <li>
+            4 hours per night
+            generator usage included with rental for free.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="row">
+      <div class="col-lg-3">
+        <strong>Cancellation Policy</strong>
+      </div>
+      <div id="cancellation-policy-col" class="col-lg-9">
+        <div>
+          <strong>Strict</strong>
+          <span> - </span>
+          Renter may receive full refund of money collected up to 30 days before rental, no refund within 30 days of rental. A $99 cancellation processing fee will be applied to all partial and full refunds.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="row">
+      <div class="col-lg-3">
+        <strong>Instant Book</strong>
+      </div>
+      <div id="instant-book-col" class="col-lg-9">
+        <ul class="list-unstyled mb-0">
+          <li>
+            Advanced Notice: at least 1 night
+            notice (contact owner for more immediate reservations)
+          </li>
+          <li>
+            Maximum Trip Length: 30 nights
+            (contact owner for longer reservations)
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+  <!-- /rates -->
+  <!-- availability -->
+  <div class="card">
+    <div class="card-header p-2" id="availability-heading">
+      <button class="btn btn-link btn-block text-left py-0 px-2 text-dark font-weight-bold" type="button" data-toggle="collapse" data-target="#availability-panel" aria-expanded="true" aria-controls="availability-panel">
+        Availability
+        <div class="float-right">
+          <i class="fas fa-angle-down"></i>
+          <i class="fas fa-angle-up d-none"></i>
+        </div>
+      </button>
+    </div>
+    <div id="availability-panel" class="details-panel collapse" aria-labelledby="availability-heading" data-parent="#accordion" style="overflow: hidden;">
+      <div id="availability" class="list-group list-group-flush details-list-group border-top">
+  <div class="list-group-item">
+    <strong class="d-none d-sm-block">Availability</strong>
+    <div class="mb-3 mt-sm-3">
+            <div data-hypernova-key="AvailabilityCalendar" data-hypernova-id="0522be84-3636-4bae-adec-53bbfa525fcb"></div>
+      <script type="application/json" data-hypernova-key="AvailabilityCalendar" data-hypernova-id="0522be84-3636-4bae-adec-53bbfa525fcb"><!--{}--></script>
+
+    </div>
+    <div class="px-3 px-sm-0">
+      <p>Not available for your dates? Check other RV rentals near Glendale, CA</p>
+      <!-- The "|| your area" below is to handle inconsistencies in region records and can be removed in the future -->
+      <a class="btn btn-rvshare-yellow" href="/rv-rental/glendale/ca">Check availability for Glendale</a>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <!-- /availability -->
+  <!-- map -->
+  <div class="card">
+    <div class="card-header p-2" id="map-heading">
+      <button class="btn btn-link btn-block text-left py-0 px-2 text-dark font-weight-bold" type="button" data-toggle="collapse" data-target="#map-panel" aria-expanded="true" aria-controls="map-panel">
+        Map
+        <div class="float-right">
+          <i class="fas fa-angle-down"></i>
+          <i class="fas fa-angle-up d-none"></i>
+        </div>
+      </button>
+    </div>
+    <div id="map-panel" class="details-panel collapse" aria-labelledby="map-heading" data-parent="#accordion">
+      <div id="map" class="border-top py-sm-4 mt-sm-4">
+  <strong class="pb-3 d-none d-sm-block">Map</strong>
+        <div data-hypernova-key="ApproxLocationMap" data-hypernova-id="c8edb8f0-f994-4045-b301-a6cdfa0aefb6"></div>
+      <script type="application/json" data-hypernova-key="ApproxLocationMap" data-hypernova-id="c8edb8f0-f994-4045-b301-a6cdfa0aefb6"><!--{"apiKey":"AIzaSyCzU6Fh7oh4POX2jH0SyKH_xmbNuVuoIiw","lat":"34.15212299999999","lng":"-118.247893"}--></script>
+
+  <div class="m-2 ml-lg-0">
+    Exact location information is provided after a booking is confirmed
+  </div>
+</div>
+
+    </div>
+  </div>
+  <!-- /map -->
+  <!-- reviews -->
+  <!-- /reviews -->
+</div>
+
+    </div>
+  </div>
+</main>
+<!-- /details -->
+<article id="owner" class="about-owner bg-light">
+  <div class="container">
+    <h2 class="h4">
+      About the Owner, Stepan
+    </h2>
+    <div class="row">
+      <div class="media d-block d-sm-flex col-md-12 col-lg-8">
+        <img alt="" height="148" width="148" class="rounded-circle" style="margin: 1em 1em 1em 0;" title="Owner Photo" data-name="Stepan" src="https://d3adfz34ynqwkr.cloudfront.net/image/upload/h_148,w_148,c_thumb,g_face:center,f_auto,q_70/rvs-images/7b49b8ab36117c7b9e542471d3cec348.png" />
+        <div class="media-body">
+          <div class="my-3 d-none d-sm-block">
+            <p></p>
+          </div>
+                <div data-hypernova-key="ContactOwnerButton" data-hypernova-id="d2047dbf-b8ca-4a42-8c60-33096ba222e3"></div>
+      <script type="application/json" data-hypernova-key="ContactOwnerButton" data-hypernova-id="d2047dbf-b8ca-4a42-8c60-33096ba222e3"><!--{"btnProps":{"size":"lg","color":"rvshare-yellow"}}--></script>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div class="similar-rvs container d-none d-sm-block">
+  <h2 class="h4 mb-3">We Found More RV Rentals Near Glendale, CA You May Like</h2>
+        <div data-hypernova-key="SimilarItems" data-hypernova-id="9030ebc6-66e8-430f-a5fd-c772ce71b572"></div>
+      <script type="application/json" data-hypernova-key="SimilarItems" data-hypernova-id="9030ebc6-66e8-430f-a5fd-c772ce71b572"><!--{"items":[{"id":"1141667","type":"rvs","attributes":{"result_id":1141667,"how_many_it_sleeps":5,"rate":249.0,"type":"Class C Motor Home","headline":"NEW! 2019 Winnebago View 24J","rv_make_model":"Winnebago View","rv_year":2019,"is_instant_book":true,"insurance_status":"approved","location":{"name":"Burbank","distance":3.529272323461414,"lat":"34.1642356","lng":"-118.3078609"},"reviews":{"count":0,"score":0.0,"max_score":100},"thumbnail":{"filename":"f92809eb4f14ee7c8b00c93f26b54a74.jpeg","url":"https://d3adfz34ynqwkr.cloudfront.net/image/upload/w_455,h_280,c_fill,g_center,f_auto,q_70/rvs-images/f92809eb4f14ee7c8b00c93f26b54a74.jpeg"},"favorited":false}},{"id":"1002841","type":"rvs","attributes":{"result_id":1002841,"how_many_it_sleeps":6,"rate":160.0,"type":"Class C Motor Home","headline":"Great Times Ahead!","rv_make_model":"Chevrolet Fleetwood","rv_year":2007,"is_instant_book":true,"insurance_status":"approved","location":{"name":"Los Angeles","distance":6.905847120098901,"lat":"34.0522342","lng":"-118.2436849"},"reviews":{"count":4,"score":80.0,"max_score":100},"thumbnail":{"filename":"1496685780.fd19cbc5191528a0999213940d1743f0.jpg","url":"https://d3adfz34ynqwkr.cloudfront.net/image/upload/w_455,h_280,c_fill,g_center,f_auto,q_70/rvs-images/1496685780.fd19cbc5191528a0999213940d1743f0.jpg"},"favorited":false}},{"id":"1134799","type":"rvs","attributes":{"result_id":1134799,"how_many_it_sleeps":5,"rate":249.0,"type":"Class C Motor Home","headline":"Sunseeker by Forest River 2017","rv_make_model":"Mercedes Forest River Sunseeke","rv_year":2017,"is_instant_book":false,"insurance_status":null,"location":{"name":"Los Angeles","distance":9.443629758086612,"lat":"34.22068359999999","lng":"-118.39083060000002"},"reviews":{"count":0,"score":0.0,"max_score":100},"thumbnail":{"filename":"1533075081.d2eece0480cb843158bdc14a8a30ea2f.jpg","url":"https://d3adfz34ynqwkr.cloudfront.net/image/upload/w_455,h_280,c_fill,g_center,f_auto,q_70/rvs-images/1533075081.d2eece0480cb843158bdc14a8a30ea2f.jpg"},"favorited":false}},{"id":"1091816","type":"rvs","attributes":{"result_id":1091816,"how_many_it_sleeps":4,"rate":249.0,"type":"Class C Motor Home","headline":"2017 Mercedes by Forest River Sunseeker","rv_make_model":"Sunseeker by Forest River Sunseeker","rv_year":2017,"is_instant_book":false,"insurance_status":"approved","location":{"name":"North Hollywood","distance":9.45748874413519,"lat":"34.220392","lng":"-118.39131399999997"},"reviews":{"count":0,"score":0.0,"max_score":100},"thumbnail":{"filename":"1531728096.af286a2ccaecdc7cd6b510d7195a8957.jpg","url":"https://d3adfz34ynqwkr.cloudfront.net/image/upload/w_455,h_280,c_fill,g_center,f_auto,q_70/rvs-images/1531728096.af286a2ccaecdc7cd6b510d7195a8957.jpg"},"favorited":false}}],"searchLocation":"Glendale, CA"}--></script>
+
+  <div>
+    <a href="/rv-rental/glendale/ca">
+      View more RV Rentals near Glendale, CA &raquo;
+    </a>
+  </div>
+</div>
+
+<div class="divider_line d-none d-sm-block">
+  <div class="divider_line__icon">
+    <img alt="" src="https://d2np1fv8ntlij5.cloudfront.net/assets/images/icon-divider-cfb66b3efc33245df64b739b1f3022fa.png" />
+  </div>
+</div>
+
+<section id="cta-book" class="">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10">
+        <h2>Why Book Your RV Rental With RVshare</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <img alt="Secure Payments" src="https://d2np1fv8ntlij5.cloudfront.net/assets/images/secure-payments-29e707d1cf6ab1e8fe8d1308564bc7d7.png" />
+            <h3 class="text-uppercase">Secure Payments</h3>
+            <p>A secure payment system gives you peace of mind.</p>
+          </div>
+          <div class="col-md-4">
+            <img alt="24/7 Roadside Assistance" src="https://d2np1fv8ntlij5.cloudfront.net/assets/images/roadside-assistance-93125ae16787f66b8cb1c41b4bd415be.png" />
+            <h3 class="text-uppercase">Roadside Assistance</h3>
+            <p>FREE 24/7 roadside assistance is provided for your entire trip.</p>
+          </div>
+          <div class="col-md-4">
+            <img alt="Rewards Program" src="https://d2np1fv8ntlij5.cloudfront.net/assets/images/rental-rewards-20ccdd019c2570128f8a5b3696d4b2cd.png" />
+            <h3 class="text-uppercase">Rewards Program</h3>
+            <p>5% cash back rewards to use towards your next trip.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta-report">
+        <div data-hypernova-key="FreeReportForm" data-hypernova-id="be0b8c7e-5d8c-497d-86a4-8b747348d702"></div>
+      <script type="application/json" data-hypernova-key="FreeReportForm" data-hypernova-id="be0b8c7e-5d8c-497d-86a4-8b747348d702"><!--{}--></script>
+
+</section>
+
+<section class="d-none d-lg-block">
+  <div id="partner_logos" class="d-flex justify-content-center flex-sm-column flex-md-row">
+    <img alt="RVIA" src="https://d2np1fv8ntlij5.cloudfront.net/assets/images/rvia-logo-9f2bb2b7d6b08194c5d226d00b7b5113.png" />
+    <img alt="Go RVing" src="https://d2np1fv8ntlij5.cloudfront.net/assets/images/go-rving-logo-d685f1d0c1a52c19f4d540f07c7aeda8.png" />
+    <img alt="RVDA" src="https://d2np1fv8ntlij5.cloudfront.net/assets/images/rvda-logo-4853bf02f786f8bed123e56d4e6d5960.png" />
+    <img alt="Family Motor Coach Assoc" src="https://d2np1fv8ntlij5.cloudfront.net/assets/images/family-motor-coach-assoc-logo-f3a8b53f038f641a194790150e54b16f.png" />
+  </div>
+</section>
+
+
+    <footer id="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <div class="row">
+          <div class="col-md-4 d-none d-md-block">
+            <img alt="RVshare" src="https://d2np1fv8ntlij5.cloudfront.net/assets/images/logo02-939b09e35bfefab9f40f44765af56085.png" />
+          </div>
+          <div class="col-md offset-md-0 offset-lg-1">
+            <h3>Company</h3>
+            <ul class="list-unstyled">
+              <li>
+                <a href="/about">About</a>
+              </li>
+              <li>
+                <a target="_blank" rel="noopener" href="https://rvshare.com/blog/">Blog</a>
+              </li>
+              <li>
+                <a target="_blank" rel="noopener" href="https://help.rvshare.com/hc/en-us">Help</a>
+              </li>
+              <li>
+                <a href="/insurance">Insurance</a>
+              </li>
+              <li>
+                <a href="/how-it-works">How it Works</a>
+              </li>
+              <li>
+                <a href="/affiliates">Affiliates Program</a>
+              </li>
+              <li>
+                <a href="/terms-of-service">Terms of Service</a>
+              </li>
+              <li>
+                <a href="/privacy-policy">Privacy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <h3>Owners</h3>
+            <ul class="list-unstyled">
+              <li>
+                <a href="/list-your-rv">List Your RV</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <h3>Renters</h3>
+            <ul class="list-unstyled">
+              <li>
+                <a href="/rv-rental">Search RV Rentals</a>
+              </li>
+              <li>
+                <a href="/reviews/usa">RV Rental Reviews</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="social-footer">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-9">
+          <ul class="list-unstyled d-flex justify-content-between">
+            <li>
+              <a href="https://www.facebook.com/rvshare" target="_blank" aria-label="facebook" rel="noopener">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/RVshare" target="_blank" aria-label="twitter" rel="noopener">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/+Rvshareonline" target="_blank" aria-label="google-plus" rel="noopener">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/rvshare/" target="_blank" aria-label="instagram" rel="noopener">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.com/rvshare/" target="_blank" aria-label="pinterest" rel="noopener">
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </li>
+          </ul>
+          <p class="text-center mb-0">&copy; Copyright 2018 RVshare.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+
+
+  <meta id="preloaded-state__env" content="{&quot;apiHost&quot;:&quot;https://api.rvshare.com&quot;}"><meta id="preloaded-state__booking" content="{&quot;bookedRanges&quot;:[{&quot;start_date&quot;:&quot;2018-08-26&quot;,&quot;end_date&quot;:&quot;2018-09-04&quot;},{&quot;start_date&quot;:&quot;2018-09-26&quot;,&quot;end_date&quot;:&quot;2018-10-05&quot;},{&quot;start_date&quot;:&quot;2018-09-14&quot;,&quot;end_date&quot;:&quot;2018-09-16&quot;}],&quot;canInstantBook&quot;:true,&quot;minNights&quot;:2,&quot;rvId&quot;:&quot;1128643&quot;,&quot;hasNightlyRate&quot;:true,&quot;nightlyRate&quot;:129.0,&quot;ownerId&quot;:683060}"><meta id="preloaded-state__locale" content="{&quot;i18nLocale&quot;:&quot;en&quot;,&quot;i18nDefaultLocale&quot;:&quot;en&quot;}"><meta id="preloaded-state__location" content="{&quot;pathname&quot;:&quot;/rvs/details/1128643&quot;,&quot;search&quot;:&quot;?&quot;}">
+  <meta id="segment_page" content="{&quot;name&quot;:&quot;RV Details&quot;,&quot;properties&quot;:{&quot;Version&quot;:&quot;Rails&quot;,&quot;RV Details Page - Application&quot;:&quot;rails1&quot;,&quot;RV&quot;:&quot;1128643&quot;,&quot;Instant Book&quot;:true,&quot;dynx_itemid&quot;:&quot;1128643&quot;,&quot;dynx_pagetype&quot;:&quot;offerdetail&quot;,&quot;dynx_totalvalue&quot;:129.0}}"><meta id="segment_events" content="[{&quot;name&quot;:&quot;ViewContent&quot;,&quot;properties&quot;:{&quot;content_type&quot;:&quot;hotel&quot;,&quot;content_ids&quot;:&quot;1128643&quot;,&quot;country&quot;:&quot;United States&quot;,&quot;city&quot;:&quot;Glendale&quot;,&quot;region&quot;:&quot;California&quot;,&quot;num_adults&quot;:1,&quot;value&quot;:129.0,&quot;currency&quot;:&quot;USD&quot;},&quot;options&quot;:{&quot;integrations&quot;:{&quot;All&quot;:false,&quot;Facebook Pixel&quot;:true}}}]">
+        <div data-hypernova-key="ModalRoot" data-hypernova-id="7ebb0863-171a-4fa4-8444-ba80a729f3c1"></div>
+      <script type="application/json" data-hypernova-key="ModalRoot" data-hypernova-id="7ebb0863-171a-4fa4-8444-ba80a729f3c1"><!--{}--></script>
+
+
+      <script>
+//<![CDATA[
+
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
+    analytics.load('CbCbPn6N1tmRT9uCGAxyZyYBV3oIAOFH');
+    }}();
+
+//]]>
+</script>
+    <script type="text/javascript">
+  const warningTitleCSS = 'color:red; font-size:60px; font-weight: bold; -webkit-text-stroke: 1px black;';
+  const warningDescCSS = 'font-size: 18px; line-height: 24px;';
+  console.log(
+    '%cWARNING!\n%cUsing this console may allow attackers to impersonate you and steal your information using an attack called Self-XSS. Do not enter or paste code that you do not understand.',
+    warningTitleCSS,
+    warningDescCSS
+  );
+</script>
+
+
+  <script src="https://d2np1fv8ntlij5.cloudfront.net/assets/runtime-70f201e80f38a6a9263e.js"></script>
+  <script src="https://d2np1fv8ntlij5.cloudfront.net/assets/legacy-b756e70e38f7f44bc7b3.chunk.js" async="async"></script>
+  <script src="https://d2np1fv8ntlij5.cloudfront.net/assets/vendor-979e144b4c4d87a5bbd1.chunk.js" async="async"></script>
+  <script src="https://d2np1fv8ntlij5.cloudfront.net/assets/application-31fa5f805a44c1db345e.chunk.js" async="async"></script>
+    <script src="https://d2np1fv8ntlij5.cloudfront.net/assets/details-7ea6cd06c79a600e22f7.chunk.js" async="async"></script>
+
+</body>
+</html>
